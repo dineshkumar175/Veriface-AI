@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VeriFace AI - Fake Face Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>VeriFace AI</h1>
+            <p>Detect AI-generated fake faces using deep learning</p>
+        </header>
+
+        <main>
+            <div class="upload-container">
+                <div id="drop-zone" class="drop-zone">
+                    <div class="drop-zone-content">
+                        <img src="{{ url_for('static', filename='images/upload-icon.svg') }}" alt="Upload">
+                        <p>Drag and drop an image here or click to upload</p>
+                        <input type="file" id="file-input" accept="image/*" hidden>
+                    </div>
+                </div>
+            </div>
+
+            <div id="result" class="result hidden">
+                <div class="result-container">
+                    <div class="image-preview">
+                        <img id="preview-image" src="" alt="Uploaded image">
+                    </div>
+                    <div class="prediction-details">
+                        <h2>Detection Result</h2>
+                        <div class="prediction-label">
+                            <span id="prediction-text"></span>
+                            <div class="confidence">
+                                Confidence: <span id="confidence-value"></span>%
+                            </div>
+                        </div>
+                        <div class="probability-bar">
+                            <div id="probability-fill"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2024 VeriFace AI. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

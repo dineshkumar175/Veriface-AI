@@ -1,0 +1,128 @@
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #2c3e50;
+    --success-color: #27ae60;
+    --danger-color: #e74c3c;
+    --background-color: #f5f6fa;
+    --text-color: #2c3e50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
+
+.upload-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.drop-zone {
+    border: 2px dashed var(--primary-color);
+    border-radius: 10px;
+    padding: 3rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.drop-zone:hover {
+    background-color: rgba(74, 144, 226, 0.1);
+}
+
+.drop-zone-content img {
+    width: 64px;
+    margin-bottom: 1rem;
+}
+
+.result {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.result-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.image-preview {
+    flex: 1;
+}
+
+.image-preview img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.prediction-details {
+    flex: 1;
+    padding: 1rem;
+}
+
+.prediction-label {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.confidence {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    margin-top: 0.5rem;
+}
+
+.probability-bar {
+    height: 20px;
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.probability-fill {
+    height: 100%;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    color: var(--secondary-color);
+}
